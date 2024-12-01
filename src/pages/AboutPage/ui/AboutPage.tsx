@@ -1,8 +1,6 @@
 
+
 export default function AboutPage() {
-  return (
-	<div>
-	  ABOUT PAGE
-	</div>
-  )
+	
+	return <div>О сайте</div>;
 }
