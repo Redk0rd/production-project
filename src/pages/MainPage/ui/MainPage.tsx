@@ -1,3 +1,10 @@
+
+
 export default function MainPage() {
-	return <div>Главная</div>;
+
+  return (
+    <div>
+      ыфы
+    </div>
+  );
 }
