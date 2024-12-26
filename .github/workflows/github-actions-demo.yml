@@ -1,5 +1,5 @@
 name: testing, building
-run-name: ${{ github.actor }}
+run-name: ${{ github.actor }} 'testing, building'
 on:
   push:
     branches: [master]
