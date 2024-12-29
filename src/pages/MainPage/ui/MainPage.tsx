@@ -1,10 +1,8 @@
-import { FC, ReactElement, ReactNode } from 'react'
-
-
-export default function MainPage<FC>() {
-  return (
-    <div style={{ color: 'red' }}>
-      ыghghgh
-    </div>
-  );
+export default function MainPage() {
+	return (
+		<div>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate aut
+			laboriosam soluta totam voluptatibus nulla obcaecati delectus cum hic
+		</div>
+	);
 }
