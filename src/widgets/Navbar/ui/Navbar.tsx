@@ -1,6 +1,5 @@
 import { useCallback, useState } from 'react';
 import { ClassNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Modal } from 'shared/ui/Modal/Modal';
 import cls from './Navbar.module.scss';
@@ -23,18 +22,8 @@ export const Navbar = ({ className }: NavbarProps) => {
 				deleniti?
 			</Modal>
 			<div className={cls.links}>
-				<AppLink
-					theme={AppLinkTheme.SECONDARY}
-					to={'/'}
-					className={cls.mainLink}
-				>
-					Главная
-				</AppLink>
-				<AppLink theme={AppLinkTheme.PRIMARY} to={'/about'}>
-					О сайте
-				</AppLink>
 				<Button
-					theme={ButtonTheme.BACKGROUND_INVERTED}
+					theme={ButtonTheme.OUTLINE}
 					className={cls.authBtn}
 					onClick={onToggleModal}
 				>
