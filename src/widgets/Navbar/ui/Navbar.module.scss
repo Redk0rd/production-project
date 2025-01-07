@@ -5,17 +5,13 @@
 	display: flex;
 	align-items: center;
 	padding: 15px;
-	color: var(--secondary-color);
+	border-bottom: 1px solid var(--primary-color);
 }
 
 .links {
 	margin-left: auto;
 	text-decoration: none;
 }
-
-// .mainLink {
-// 	margin-right: 15px;
-// }
 
 .authBtn {
 	border-radius: 10px;
