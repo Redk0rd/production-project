@@ -1,14 +1,44 @@
 .SideBar {
 	height: calc(100vh - var(--navbar-height));
-	width: var(--sidebar-width);
-	background: var(--inverted-bg-color);
+	min-width: var(--sidebar-width);
+	background: var(--inverted-secondary-color);
 
 	position: relative;
-	transition:width 0.3s;
+	transition: min-width 0.3s;
+	border-right: 1px solid var(--primary-color);
 }
 
 .collapsed {
-	width: var(--sidebar-width-collapsed);
+	min-width: var(--sidebar-width-collapsed);
+	.link {
+		opacity: 0;
+	}
+}
+
+.collapsedBtn{
+	margin-left: 10px;
+}
+
+.items {
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    margin-left: 5px;
+    opacity: 1;
+}
+
+.icon {
+    fill: var(--inverted-primary-color);
 }
 
 .switchers{
@@ -17,8 +47,4 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-}
-
-.lang {
- margin-left: 20px;
 }
