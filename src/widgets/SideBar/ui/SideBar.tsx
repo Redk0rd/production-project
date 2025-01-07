@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ClassNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import cls from './SideBar.module.scss';
@@ -7,13 +6,14 @@ import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import AboutIcon from 'shared/assets/icons/AboutIcon.svg';
 import MainIcon from 'shared/assets/icons/MainIcon.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { ClassNames } from 'shared/lib/classNames/classNames'
 
 interface SideBarProps {
 	className?: string;
 }
 
 export const SideBar = ({ className }: SideBarProps) => {
-	const [collapsed, setCollapsed] = useState(false);
+	const [collapsed, setCollapsed] = useState(true);
 
 	const onToggle = () => {
 		setCollapsed(prev => !prev);
