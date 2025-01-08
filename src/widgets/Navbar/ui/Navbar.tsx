@@ -21,7 +21,9 @@ export const Navbar = ({ className }: NavbarProps) => {
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
 				deleniti?
 			</Modal>
+			
 			<div className={cls.links}>
+			
 				<Button
 					theme={ButtonTheme.OUTLINE}
 					className={cls.authBtn}
