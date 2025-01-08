@@ -34,11 +34,10 @@
 
 .link {
     margin-left: 5px;
-    opacity: 1;
 }
 
 .icon {
-    fill: var(--inverted-primary-color);
+    fill: var(--primary-color);
 }
 
 .switchers{
@@ -47,4 +46,13 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+}
+
+.activePage{
+	.icon {
+		fill: var(--secondary-color);
+	}
+	.link {
+		color: var(--secondary-color);
+	}
 }
