@@ -6,10 +6,8 @@ import { SideBar } from 'widgets/SideBar';
 import { AppRouter } from './providers/router';
 
 export default function App() {
-	const { theme } = useTheme();
-
 	return (
-		<div className={ClassNames('app', {}, [theme])}>
+		<div className={ClassNames('app', {}, [])}>
 			<Suspense fallback=''>
 				<Navbar />
 				<div className='content-page'>

@@ -19,25 +19,26 @@ export const SideBar = ({ className }: SideBarProps) => {
 	const userLocation = useLocation();
 	const isCurrentPage = (path: string) => userLocation.pathname === path;
 
-	const onToggle = () => {
-		setCollapsed(prev => !prev);
-	};
+	const onOpen = () => setCollapsed(false);
+	const onClose = () => setCollapsed(true);
 
 	return (
 		<div
-			data-testid='sidebar'
+			data-testid="sidebar"
 			className={ClassNames(cls.SideBar, { [cls.collapsed]: collapsed }, [
 				className,
 			])}
+			onMouseEnter={onOpen}
+			onMouseLeave={onClose} 
 		>
-			<Button
+			{/* <Button
 				theme={ButtonTheme.CLEAR}
-				data-testid='sidebar-toggle'
-				onClick={onToggle}
+				data-testid="sidebar-toggle"
+				onClick={onClose}
 				className={cls.collapsedBtn}
 			>
 				{collapsed ? '>>>' : '<<<'}
-			</Button>
+			</Button> */}
 
 			<div className={cls.items}>
 				<AppLink
