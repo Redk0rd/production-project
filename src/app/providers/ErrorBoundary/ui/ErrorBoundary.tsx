@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import React, { ErrorInfo, ReactNode } from 'react';
-import { PageError } from 'widgets/PageError'
+import { PageError } from 'widgets/PageError';
 
 interface ErrorBoundaryProps {
 	children: ReactNode;
@@ -19,12 +20,11 @@ class ErrorBoundary extends React.Component<
 	}
 
 	static getDerivedStateFromError(error: Error) {
-		// Update state so the next render will show the fallback UI.
+		console.log(error);
 		return { hasError: true };
 	}
 
 	componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-		// You can also log the error to an error reporting service
 		console.log(error, errorInfo);
 	}
 
@@ -32,7 +32,7 @@ class ErrorBoundary extends React.Component<
 		const { hasError } = this.state;
 		const { children } = this.props;
 		if (hasError) {
-			return <PageError/>;
+			return <PageError />;
 		}
 
 		return children;

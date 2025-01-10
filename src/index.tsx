@@ -7,14 +7,14 @@ import { BrowserRouter } from 'react-router-dom';
 import './app/styles/index.scss';
 
 render(
-	<StoreProvider>
-		<BrowserRouter>
-			<ErrorBoundary>
-				<ThemeProvider>
-					<App />
-				</ThemeProvider>
-			</ErrorBoundary>
-		</BrowserRouter>
-	</StoreProvider>,
-	document.getElementById('root')
+    <StoreProvider>
+        <BrowserRouter>
+            <ErrorBoundary>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
+            </ErrorBoundary>
+        </BrowserRouter>
+    </StoreProvider>,
+    document.getElementById('root'),
 );

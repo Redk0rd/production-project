@@ -1,8 +1,8 @@
-import { RuleSetRule } from 'webpack'
-import { BuildOptions } from './types/config'
-import { buildCssLoader } from './loaders/buildCssLoader'
+import { RuleSetRule } from 'webpack';
+import { BuildOptions } from './types/config';
+import { buildCssLoader } from './loaders/buildCssLoader';
 
-export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
+export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 	const svgLoader = {
 		test: /\.svg$/,
 		use: ['@svgr/webpack'],
@@ -25,10 +25,5 @@ export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
 		],
 	};
 
-	return [
-		typescriptLoader,
-		 cssLoader,
-		 svgLoader,
-		 fileLoader,
-		];
+	return [typescriptLoader, cssLoader, svgLoader, fileLoader];
 }
