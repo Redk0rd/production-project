@@ -5,7 +5,7 @@ import MainIcon from 'shared/assets/icons/MainIcon.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { ClassNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+// import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import cls from './SideBar.module.scss';
 
@@ -29,7 +29,7 @@ export const SideBar = ({ className }: SideBarProps) => {
 				className,
 			])}
 			onMouseEnter={onOpen}
-			onMouseLeave={onClose} 
+			onMouseLeave={onClose}
 		>
 			{/* <Button
 				theme={ButtonTheme.CLEAR}

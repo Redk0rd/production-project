@@ -13,7 +13,7 @@ export const Navbar = ({ className }: NavbarProps) => {
 
 	const onToggleModal = useCallback(() => {
 		setIsAuthModal(prev => !prev);
-	},[]);
+	}, []);
 
 	return (
 		<div className={ClassNames(cls.Navbar, {}, [className])}>
@@ -21,9 +21,8 @@ export const Navbar = ({ className }: NavbarProps) => {
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
 				deleniti?
 			</Modal>
-			
+
 			<div className={cls.links}>
-			
 				<Button
 					theme={ButtonTheme.OUTLINE}
 					className={cls.authBtn}
