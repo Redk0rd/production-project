@@ -10,30 +10,32 @@ interface ModalProps {
 	onClose?: () => void;
 }
 
-export const Modal = ({ className, children, isOpen, onClose }: ModalProps) => {
-	const mods: Record<string, boolean> = {
-		[cls.opened]: isOpen,
-	};
+export const Modal = ({
+    className, children, isOpen, onClose,
+}: ModalProps) => {
+    const mods: Record<string, boolean> = {
+        [cls.opened]: isOpen,
+    };
 
-	const closeHandler = useCallback(() => {
-		if (onClose) {
-			onClose();
-		}
-	},[]);
+    const closeHandler = useCallback(() => {
+        if (onClose) {
+            onClose();
+        }
+    }, [onClose]);
 
-	const onContentClick = useCallback((event: MouseEvent) => {
-		event.stopPropagation();
-	}, []);
+    const onContentClick = useCallback((event: MouseEvent) => {
+        event.stopPropagation();
+    }, []);
 
-	return (
-		<Portal>
-			<div className={ClassNames(cls.Modal, mods, [className])}>
-				<div className={cls.overlay} onClick={closeHandler}>
-					<div className={cls.content} onClick={onContentClick}>
-						{children}
-					</div>
-				</div>
-			</div>
-		</Portal>
-	);
+    return (
+        <Portal>
+            <div className={ClassNames(cls.Modal, mods, [className])}>
+                <div className={cls.overlay} onClick={closeHandler}>
+                    <div className={cls.content} onClick={onContentClick}>
+                        {children}
+                    </div>
+                </div>
+            </div>
+        </Portal>
+    );
 };

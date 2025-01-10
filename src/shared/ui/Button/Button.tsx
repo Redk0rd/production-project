@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { ButtonHTMLAttributes, FC } from 'react';
 import { ClassNames } from '../../lib/classNames/classNames';
 import cls from './Button.module.scss';
@@ -34,17 +35,15 @@ export const Button: FC<ButtonProps> = props => {
 	} = props;
 
 	const mods: Record<string, boolean> = {
-        [cls[theme]]: true,
-        [cls.square]: square,
-        [cls[size]]: true,
-    };
+		[cls[theme]]: true,
+		[cls.square]: square,
+		[cls[size]]: true,
+	};
 
 	return (
 		<button
 			type="button"
-			className={ClassNames(
-				cls.Button, mods, [className, cls[theme]]
-			)}
+			className={ClassNames(cls.Button, mods, [className, cls[theme]])}
 			{...otherProps}
 		>
 			{children}

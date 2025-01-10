@@ -7,14 +7,13 @@ interface PageErrorProps {
 }
 
 export const PageError = ({ className }: PageErrorProps) => {
-
-	const ReloadPAge =() => {
-		location.reload()
-	}
-	return (
-		<div className={ClassNames(cls.PageError, {}, [className])}>
-			<p>Произошла непредвиденная ошибка</p>
-			<Button onClick={ReloadPAge}>Перезагрузить страницу</Button>
-		</div>
-	);
+    const ReloadPAge = () => {
+        location.reload();
+    };
+    return (
+        <div className={ClassNames(cls.PageError, {}, [className])}>
+            <p>Произошла непредвиденная ошибка</p>
+            <Button onClick={ReloadPAge}>Перезагрузить страницу</Button>
+        </div>
+    );
 };

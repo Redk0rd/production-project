@@ -1,4 +1,3 @@
-import { PageError } from './ui/PageError'
+import { PageError } from './ui/PageError';
 
-PageError
 export { PageError };
