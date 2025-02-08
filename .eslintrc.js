@@ -38,12 +38,13 @@ module.exports = {
 		'max-len': ['error', { ignoreComments: true, code: 130 }],
 		'jsx-a11y/no-static-element-interactions': 'off',
 		'jsx-a11y/click-events-have-key-events': 'off',
-		'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-		'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies,
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'error',
 		'no-param-reassign': 'off',
 		quotes: ['error', 'single'],
-        'arrow-parens': ['error', 'as-needed'],
-        'comma-dangle': 'off',
+		'arrow-parens': ['error', 'as-needed'],
+		'comma-dangle': 'off',
+		'linebreak-style': ['off'],
 	},
 	globals: {
 		__IS_DEV__: true,
