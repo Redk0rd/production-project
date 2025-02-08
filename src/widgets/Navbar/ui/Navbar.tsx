@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 import { ClassNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Modal } from 'shared/ui/Modal/Modal';
+import { LoginModal } from 'features/AuthByUsername';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -11,22 +11,21 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
 	const [isAuthModal, setIsAuthModal] = useState(false);
 
-	const onToggleModal = useCallback(() => {
-		setIsAuthModal(prev => !prev);
+	const onCloseModal = useCallback(() => {
+		setIsAuthModal(false);
+	}, []);
+	const onOpenModal = useCallback(() => {
+		setIsAuthModal(true);
 	}, []);
 
 	return (
 		<div className={ClassNames(cls.Navbar, {}, [className])}>
-			<Modal isOpen={isAuthModal} onClose={onToggleModal}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-				deleniti?
-			</Modal>
-
+			<LoginModal isOpen={isAuthModal} OnClose={onCloseModal} />
 			<div className={cls.links}>
 				<Button
 					theme={ButtonTheme.OUTLINE}
 					className={cls.authBtn}
-					onClick={onToggleModal}
+					onClick={onOpenModal}
 				>
 					Войти
 				</Button>
